@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/* CSS Document for AffiliateNetwork.info */
+
+/* NORMALIZE */
+html, body, div, section, article, aside, nav {
+   margin: 0;
+   padding: 0;
+}
+img {
+   border: none;
+   float: left;
+   margin: 0 1.25em 0.5em 0;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+   empty-cells: hide;
+}
+tr, td {
+   margin: 0;
+   padding: 0;
+}
+article {
+  border: /* 1px solid black; */
+}
+
+/**** STRUCTUUR EN LAY-OUT ****/
+ 
+/* deze oef gaat door een aantal stadia:
+1. FIXED LAY-OUT: 980px container, basis 5 kol
+*/
+ 
+.wikkel {
+   width: 980px;
+   margin: 0 auto;
+}
+
+/* My Stuff */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+	font-size: 100%; /* 1em = 16px */
+    color:black;
+	background:white;
+}
+h1, h2, h3, h4, h5, h6 {
+    color:#005689;
+}
+
+/**** LIJNFOOTER ****/
+#lijnfooter {
+    text-align: center;
+	color: rgb(127, 127, 127);
+}
+#lijnfooter ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#lijnfooter ul li { 
+    display:  inline;
+}
+
+/* Standard Gazet */
+header {
+   padding-top: 1em;		/* 0.375em;   /* 6px */
+}
+section, aside {
+   margin-top: 0.25em;
+   margin-bottom: 0.25em;
+}
+article {
+   margin: 0 20px 0 0;              /* gutter */
+   padding: 0.375em 0 1.25em;   /* 12px */
+   color: rgb(127, 127, 127);
+}
+article h4 {
+   margin: 0.375em 0;              /* 6px */
+}
+article p {
+   margin: 0;
+   padding: 0 0 0.75em 0;           /*12px*/
+}
+
+/****GRID****/
+.span1 {
+    width: 196px;
+    float: left;
+}
+.span2 {
+    width: 450px; /* klopt niet */
+    float: left;
+}
+.span3 {
+    width: 588px;
+    float: left;
+}
+.span4 {
+    width: 784px;
+    float: left;
+}
+.span5 {
+    width: 980px;
+    float: center;
+}
+.span2>article {
+    margin-right: 0;    /* geen gutter in span5*/
+}
+.span2>h4 {
+    margin-right: 0;    /* geen gutter in span5*/
+}
+
+/****BUTTONS****/
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:bold;
+	padding:4px 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* ClearFix */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
